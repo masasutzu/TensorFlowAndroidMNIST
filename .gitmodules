@@ -1,0 +1,3 @@
+[submodule "jni-build/jni/include/tensorflow"]
+	path = jni-build/jni/include/tensorflow
+	url = https://github.com/tensorflow/tensorflow.git

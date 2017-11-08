@@ -77,7 +77,7 @@ LOCAL_LDLIBS    := \
 	-Wl,--fix-cortex-a8 \
 	-Wl,-S \
 
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/include \
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/tensorflow \
 	$(LOCAL_PATH)/genfiles \
 	$(LOCAL_PATH)/include/external/protobuf \
 	$(LOCAL_PATH)/include/external/bazel_tools \
