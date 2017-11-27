@@ -7,3 +7,6 @@
 [submodule "jni-build/jni/include/external/nsync"]
 	path = jni-build/jni/include/external/nsync
 	url = https://github.com/google/nsync.git
+[submodule "jni-build/jni/include/external/bazel"]
+	path = jni-build/jni/include/external/bazel
+	url = https://github.com/bazelbuild/bazel.git
