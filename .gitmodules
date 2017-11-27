@@ -4,3 +4,6 @@
 [submodule "jni-build/jni/include/external/protobuf"]
 	path = jni-build/jni/include/external/protobuf
 	url = https://github.com/google/protobuf.git
+[submodule "jni-build/jni/include/external/nsync"]
+	path = jni-build/jni/include/external/nsync
+	url = https://github.com/google/nsync.git
