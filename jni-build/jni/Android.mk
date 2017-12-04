@@ -56,9 +56,11 @@ LOCAL_LDLIBS    := \
 	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libandroid_tensorflow_lib.lo \
 	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libandroid_tensorflow_kernels.lo \
 	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libandroid_tensorflow_lib_lite.lo \
-	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libprotos_all_cc.a \
+	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libprotos_all_cc_impl.a \
 	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libprotobuf.a \
 	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libprotobuf_lite.a \
+	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libnsync_cpp.a \
+	$(LOCAL_PATH)/libs/$(TARGET_ARCH_ABI)/libfft2d.a \
 	-Wl,-no-whole-archive \
 	$(NDK_ROOT)/sources/cxx-stl/gnu-libstdc++/4.9/libs/$(TARGET_ARCH_ABI)/libgnustl_static.a \
 	$(NDK_ROOT)/sources/cxx-stl/gnu-libstdc++/4.9/libs/$(TARGET_ARCH_ABI)/libsupc++.a \
@@ -80,10 +82,11 @@ LOCAL_LDLIBS    := \
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include/tensorflow \
 	$(LOCAL_PATH)/genfiles \
 	$(LOCAL_PATH)/include/external/protobuf \
-	$(LOCAL_PATH)/include/external/bazel_tools \
-	$(LOCAL_PATH)/include/external/eigen_archive \
+	$(LOCAL_PATH)/include/external/bazel \
+	$(LOCAL_PATH)/include/external/eigen \
 	$(LOCAL_PATH)/include/external/protobuf/src \
-	$(LOCAL_PATH)/include/external/bazel_tools/tools/cpp/gcc3 \
+	$(LOCAL_PATH)/include/external/bazel/tools/cpp/gcc3 \
+	$(LOCAL_PATH)/include/external/nsync/public \
 
 NDK_MODULE_PATH := $(call my-dir)
 
