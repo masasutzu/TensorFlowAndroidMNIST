@@ -1,5 +1,5 @@
 #!/bin/bash
-ABI='armeabi-v7a'
+ABI='arm64-v8a'
 LIBS=`ls $ABI`
 
 if [ -n "$LIBS" ]; then
@@ -21,4 +21,4 @@ fi
 DOCKER_TAG='build_android_tensorflow_libs'
 
 docker build -t $DOCKER_TAG .
-docker run -v `pwd`/$ABI:/mnt --rm $DOCKER_TAG ./build_android_tensorflow_libs.sh
+docker run -v `pwd`/$ABI:/mnt --rm $DOCKER_TAG ./build_android_tensorflow_libs.sh $ABI
