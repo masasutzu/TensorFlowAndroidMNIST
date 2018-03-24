@@ -24,7 +24,7 @@ RUN mkdir android/
 
 # install bazel(depends on https://docs.bazel.build/versions/master/install-ubuntu.html#install-with-installer-ubuntu)
 ## https://github.com/bazelbuild/bazel/releases
-ENV BAZEL_VERSION=0.7.0
+ENV BAZEL_VERSION=0.11.0
 ENV SH=bazel-${BAZEL_VERSION}-installer-linux-x86_64.sh
 RUN set -x && \
   wget https://github.com/bazelbuild/bazel/releases/download/${BAZEL_VERSION}/${SH} && \
@@ -45,8 +45,8 @@ RUN set -x && \
 # install android-sdk
 ## https://developer.android.com/studio/releases/build-tools.html
 ENV TOOLS_ZIP=sdk-tools-linux-3859397.zip
-ENV BUILD_TOOLS_VERSION=26.0.2
-ENV API_LEVEL=23
+ENV BUILD_TOOLS_VERSION=27.0.3
+ENV API_LEVEL=25
 
 RUN set -x && \
   wget https://dl.google.com/android/repository/${TOOLS_ZIP} && \
@@ -58,7 +58,7 @@ RUN set -x && \
 
 # get tensorflow
 ## https://github.com/tensorflow/tensorflow/releases
-ENV TENSORFLOW_VERSION=v1.4.0
+ENV TENSORFLOW_VERSION=v1.6.0
 RUN set -x && \
   git clone -b ${TENSORFLOW_VERSION} https://github.com/tensorflow/tensorflow
 WORKDIR tensorflow/

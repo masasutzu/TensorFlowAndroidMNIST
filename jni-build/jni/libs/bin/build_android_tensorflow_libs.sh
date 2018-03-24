@@ -9,10 +9,10 @@ ABI=$1
 
 if [ "$ABI" = 'arm64-v8a' ]; then
   OPTION='--config=android_arm64 --fat_apk_cpu=arm64-v8a'
-  LIBS_DIR='android-aarch64-linux-android-clang3.8-gnu-libstdcpp-opt'
+  LIBS_DIR='android-arm64-v8a-opt'
 else
   OPTION=''
-  LIBS_DIR='android-arm-linux-androideabi-clang3.8-v7a-gnu-libstdcpp-opt'
+  LIBS_DIR='android-armeabi-v7a-opt'
 fi
 bazel build -c opt $OPTION //tensorflow/examples/android:tensorflow_demo
 
